@@ -10,11 +10,11 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Valeria lol' });
 });
 
-app.get('/', (req, res) => {
+router.get('/nuevo', (req, res) => {
   res.send('Necesito get info!')
 })
 
-app.post('/', (req, res) => {
+router.post('/creando', (req, res) => {
   res.send('Probando que tenga un endpoint')
 })
 
