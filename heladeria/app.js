@@ -2,6 +2,9 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 
+const port = 3000
+
+
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
@@ -25,11 +28,17 @@ app.use('/', indexRouter);
 app.use('/nuevo', indexRouter);
 app.use('/creando', indexRouter);
 app.use('/users', usersRouter);
-
+app.use('/connect', indexRouter);
+app.use('/inventory', indexRouter);
+app.use('/nuevo-inventory', indexRouter);
+app.use('/edit-inventory', indexRouter);
+app.use('/inventroy:id', indexRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+
 
 // error handler
 app.use(function(err, req, res, next) {
