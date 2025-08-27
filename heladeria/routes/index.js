@@ -26,10 +26,12 @@ router.get('/', function(req, res, next) {
 
 router.get('/nuevo', ind.getNuevo);
 router.post('/creando',  ind.postProbando);
-router.post('/nuevo-inventory', createInventory);
-router.get('/inventory', getInventories);
-router.put('/edit-inventory/:id', updateInventory);
-router.delete('/inventory/:id', deleteInventory);
+router.post('/nuevo-inventory', ind.createInventory);
+router.get('/inventory', ind.getInventories);
+router.put('/edit-inventory/:id', ind.updateInventory);
+router.delete('/inventory/:id', ind.deleteInventory);
+router.get('/weather', ind.getWeatherApi);
+
 
 router.get('/connect', (req, res) => {
   conectarDB();

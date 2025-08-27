@@ -33,6 +33,7 @@ app.use('/inventory', indexRouter);
 app.use('/nuevo-inventory', indexRouter);
 app.use('/edit-inventory', indexRouter);
 app.use('/inventroy:id', indexRouter);
+app.use('/weather', indexRouter);             
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
